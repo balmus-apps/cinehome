@@ -627,7 +627,7 @@ export function mountPlayer(container, { id: requestedId, profile, start, onExit
       // TV: Down reaches the control bar, Left/Right move along it, Up goes back to seeking
       const inBar = onButton && document.activeElement.classList.contains('pbtn');
       if (isTv && inBar && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
-        const buttons = [...root.querySelectorAll('.player-top .pbtn, .player-controls .pbtn')].filter(b => !b.hidden);
+        const buttons = [...root.querySelectorAll('.player-top .pbtn, .player-controls .pbtn')].filter(b => b.getClientRects().length > 0); // skip buttons hidden by CSS too (volume on TV), not just [hidden]
         const i = buttons.indexOf(document.activeElement) + (e.key === 'ArrowRight' ? 1 : -1);
         if (buttons[i]) buttons[i].focus();
         e.preventDefault();
