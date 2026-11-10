@@ -1,0 +1,21 @@
+{
+  "name": "cinehome",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CineHome: a local Netflix-style streaming app for your own movie folders",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "MEDIA_ROOT=../storage DATA_DIR=../data node --watch src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "express": "^4.22.3",
+    "hls.js": "^1.7.3"
+  }
+}

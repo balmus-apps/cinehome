@@ -1,0 +1,15 @@
+{
+  "id": "com.cinehome.tv",
+  "version": "1.0.0",
+  "vendor": "CineHome",
+  "type": "web",
+  "main": "index.html",
+  "title": "CineHome",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "bgColor": "#0b0b10",
+  "iconColor": "#ff6a3d",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": true,
+  "requiredACG": []
+}

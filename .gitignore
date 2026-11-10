@@ -1,0 +1,14 @@
+# Media stays on disk, never in git
+storage/**
+!storage/kids/
+!storage/adults/
+!storage/music/
+!storage/*/.gitkeep
+
+# Runtime state and caches (progress, generated art, transcodes)
+data/
+
+node_modules/
+.env
+.DS_Store
+webosapp/dist/

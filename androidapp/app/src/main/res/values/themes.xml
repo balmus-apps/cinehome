@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cinehome_bg">#FF0B0B10</color>
+    <color name="cinehome_accent">#FFFF6A3D</color>
+
+    <style name="Theme.CineHome" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/cinehome_bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+</resources>

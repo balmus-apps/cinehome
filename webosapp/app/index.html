@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>CineHome</title>
+  <link rel="stylesheet" href="launcher.css">
+</head>
+<body>
+  <main>
+    <div class="logo"><img src="largeIcon.png" alt="">CineHome</div>
+
+    <section id="connecting">
+      <div class="spinner"></div>
+      <p id="connecting-text">Connecting…</p>
+      <button id="change" class="btn ghost">Change server</button>
+    </section>
+
+    <section id="setup" hidden>
+      <p id="setup-error" class="error"></p>
+      <label for="address">Server address</label>
+      <input id="address" type="text" autocomplete="off" spellcheck="false" placeholder="192.168.1.10:8080">
+      <p class="hint">The address of the computer running CineHome, for example <b>192.168.1.193:8080</b>.</p>
+      <button id="connect" class="btn primary">Connect</button>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="launcher.js"></script>
+</body>
+</html>

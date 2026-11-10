@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #0b0b10; color: #f3f3f6; font-family: "LG Smart UI", "Helvetica Neue", Arial, sans-serif; }
+main { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+[hidden] { display: none !important; }
+.logo { display: flex; align-items: center; font-size: 64px; font-weight: 800; margin-bottom: 70px; }
+.logo img { width: 110px; height: 110px; margin-right: 28px; }
+section { display: flex; flex-direction: column; align-items: center; width: 900px; }
+p { font-size: 30px; margin: 0 0 30px; color: #c9c9d4; }
+.hint { font-size: 24px; color: #8d8d9c; margin-top: 22px; }
+.error { color: #ff8a6a; }
+label { font-size: 26px; color: #a3a3b2; margin-bottom: 14px; }
+input { width: 100%; font-size: 40px; padding: 18px 24px; border-radius: 10px; border: 3px solid #33333f; background: #17171f; color: #fff; outline: none; text-align: center; }
+input:focus { border-color: #ff6a3d; }
+.btn { margin-top: 30px; font-size: 30px; font-weight: 700; padding: 18px 48px; border: 0; border-radius: 10px; color: #fff; background: rgba(110, 110, 130, .45); outline: none; }
+.btn.primary { background: #ff6a3d; }
+.btn:focus { box-shadow: 0 0 0 5px #fff; transform: scale(1.06); }
+.spinner { width: 80px; height: 80px; border-radius: 50%; border: 6px solid rgba(255, 255, 255, .2); border-top-color: #ff6a3d; animation: spin .9s linear infinite; margin-bottom: 36px; }
+@keyframes spin { to { transform: rotate(360deg); } }

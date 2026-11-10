@@ -1,0 +1,17 @@
+services:
+  cinehome:
+    build: ./webapp
+    image: cinehome:latest
+    container_name: cinehome
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8080}:8080"
+    environment:
+      MAX_TRANSCODES: ${MAX_TRANSCODES:-2}
+      RESCAN_INTERVAL: ${RESCAN_INTERVAL:-60}
+      CINEHOME_PASSWORD: ${CINEHOME_PASSWORD:-}
+    volumes:
+      # Movies are mounted read-only; nothing is copied into the image
+      - ${MEDIA_PATH:-./storage}:/media:ro
+      # Watch progress, generated posters and temporary transcodes
+      - ./data:/data

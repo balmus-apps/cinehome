@@ -1,0 +1,17 @@
+{
+  "name": "cinehome-webos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CineHome launcher app for LG webOS TVs",
+  "scripts": {
+    "package": "ares-package app -o dist",
+    "setup-tv": "ares-setup-device",
+    "install-tv": "ares-install --device lgtv dist/com.cinehome.tv_1.0.0_all.ipk",
+    "launch": "ares-launch --device lgtv com.cinehome.tv",
+    "inspect": "ares-inspect --device lgtv --app com.cinehome.tv",
+    "deploy": "npm run package && npm run install-tv && npm run launch"
+  },
+  "devDependencies": {
+    "@webos-tools/cli": "^3.2.6"
+  }
+}
